@@ -7,5 +7,6 @@ class Config:
     BOT_OWNER = os.environ.get("BOT_OWNER")
     BOT_USERNAME = os.environ.get("BOT_USERNAME")
     PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME")
-    GROUP = os.environ.get("GROUP") 
+    GROUP = os.environ.get("GROUP")
+    DURATION_LIMIT = int(getenv("DURATION_LIMIT", "7"))
     PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID"))
