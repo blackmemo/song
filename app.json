@@ -51,6 +51,11 @@
             "description": "Kendi kullanıcı adınızı @ bu işareti olmadan yazın.",
             "value": "",
             "required": true
+        }, 
+        "DURATION_LIMIT": {
+            "description": "İndirmeler için en fazla ses süresi sınırı (minutes).",
+            "required": true,
+            "value": "55"
         },
         "BOT_USERNAME": {
             "description": "Botun kullanıcı adını @ bu işareti olmadan yazın.",
