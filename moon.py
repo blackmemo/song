@@ -25,7 +25,66 @@ bot = Client(
 @bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
 async def live(client: Client, message: Message):
     livemsg = await message.reply_text('`EGOİSTBEY Hoşgeldin KraL Bende Burdayım🥳 **BİRİCİK SAHİBİM @DeepKraL 🖤`')
+
     
+anlik_calisan = []
+
+ozel_list = [1601353177]
+
+gece_tag = []
+
+
+
+grup_sayi = [] 
+
+sayı_calısan = []
+
+
+bot.on(events.NewMessage())
+async def mentionalladmin(event):
+  global grup_sayi
+  if event.is_group:
+    if event.chat_id in grup_sayi:
+      pass
+    else:
+      grup_sayi.append(event.chat_id)
+
+@bot.on(events.NewMessage(pattern='^/deepstatik ?(.*)'))
+async def son_durum(event):
+    global anlik_calisan,grup_sayi,ozel_list
+    sender = await event.get_sender()
+    if sender.id not in ozel_list:
+      return
+    await event.respond(f"**DEEP ETİKET BOT İstatistikleri 🤖**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlık Çalışan Grup: `{len(anlik_calisan)}`")
+                        
+
+
+@bot.on(events.NewMessage(pattern='^/deepreklam ?(.*)'))
+async def duyuru(event):
+ 
+  global grup_sayi,ozel_list
+  sender = await event.get_sender()
+  if sender.id not in ozel_list:
+    return
+  reply = await event.get_reply_message()
+  await event.respond(f"Toplam {len(grup_sayi)} Gruba'a mesaj gönderiliyor...")
+  for x in grup_sayi:
+    try:
+      await client.send_message(x,f"**@MissReklam **\n\n{reply.message}")
+    except:
+      pass
+  await event.respond(f"Reklam Başarıyla Gönderildi.")
+ 
+@bot.on(events.NewMessage(pattern='^/deep ?(.*)'))
+async def destek(event):
+   await client.send_message(event.chat_id, "**Bot Sorunsuz Çalışıyor KRAL**",
+                     buttons=(
+                      [
+                       Button.url('🧑‍💻~𝐒𝐚𝐡𝐢𝐛𝐢𝐦~🧑‍💻', f'https://t.me/YoutubeVcsahip'),
+                       Button.url('🧑‍💻~𝐘𝐞𝐭𝐤𝐢𝐥𝐢𝐦~🧑‍💻', f'https://t.me/MissSahip')
+                      ]
+                    )
+                  )    
 #musik indirme#
 
 @bot.on_message(filters.command("bul") & ~filters.edited)
