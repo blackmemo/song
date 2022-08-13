@@ -4,6 +4,9 @@ from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
 from pyrogram import Client, filters
 import yt_dlp
+from telethon import TelegramClient, events
+
+
 from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -19,30 +22,15 @@ bot = Client(
     api_id = Config.API_ID,
     api_hash = Config.API_HASH
 )
-
+client = TelegramClient('client', api_id = Config.API_ID, api_hash = Config.API_HASH).start(bot_token = Config.BOT_TOKEN )
+ 
 #start mesajı
 
 @bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
 async def live(client: Client, message: Message):
     livemsg = await message.reply_text('`EGOİSTBEY Hoşgeldin KraL Bende Burdayım🥳 **BİRİCİK SAHİBİM @DeepKraL 🖤`')
 
-logging.basicConfig(
 
-    level=logging.INFO,
-
-    format='%(name)s - [%(levelname)s] - %(message)s'
-
-)
-
-LOGGER = logging.getLogger(__name__)
-
-api_id = int(os.environ.get("APP_ID", "19785832" )
-
-api_hash = os.environ.get("API_HASH", "5a894d5786057b269caf4ae788d5ecc2")
-
-bot_token = os.environ.get("TOKEN","5446861802:AAEUkd9vTiKZpF1QJp1HdWA_c2xnY0vhqVw")
-
-client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)    
 
 
 anlik_calisan = []
