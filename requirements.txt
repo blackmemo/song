@@ -5,3 +5,4 @@ youtube_search
 requests
 yt_dlp
 ffmpeg
+telethon
