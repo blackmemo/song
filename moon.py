@@ -26,12 +26,30 @@ bot = Client(
 async def live(client: Client, message: Message):
     livemsg = await message.reply_text('`EGOİSTBEY Hoşgeldin KraL Bende Burdayım🥳 **BİRİCİK SAHİBİM @DeepKraL 🖤`')
 
-    
+logging.basicConfig(
+
+    level=logging.INFO,
+
+    format='%(name)s - [%(levelname)s] - %(message)s'
+
+)
+
+LOGGER = logging.getLogger(__name__)
+
+api_id = int(os.environ.get("APP_ID", "19785832" )
+
+api_hash = os.environ.get("API_HASH", "5a894d5786057b269caf4ae788d5ecc2")
+
+bot_token = os.environ.get("TOKEN","5446861802:AAEUkd9vTiKZpF1QJp1HdWA_c2xnY0vhqVw")
+
+client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)    
+
+
 anlik_calisan = []
 
 ozel_list = [1601353177]
 
-gece_tag = []
+melih = []
 
 
 
@@ -39,7 +57,49 @@ grup_sayi = []
 
 sayı_calısan = []
 
+@client.on(events.NewMessage(pattern='^/reload ?(.*)'))
 
+async def chatid(event):
+
+    global grup_sayi
+
+@client.on(events.NewMessage())
+
+async def chatid(event):
+
+  global melih
+
+  if event.is_group:
+
+    if event.chat_id in grup_sayi:
+
+      pass
+
+    else:
+
+      grup_sayi.append(event.chat_id)     
+
+@client.on(events.NewMessage(pattern='^/start@youtubevcprobot ?(.*)'))
+
+async def chatid(event):
+
+    global grup_sayi
+
+@client.on(events.NewMessage())
+
+async def chatid(event):
+
+  global etiketuye
+
+  if event.is_group:
+
+    if event.chat_id in grup_sayi:
+
+      pass
+
+    else:
+
+      grup_sayi.append(event.chat_id)
 @client.on(events.NewMessage())
 async def mentionalladmin(event):
   global grup_sayi
