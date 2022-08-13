@@ -26,9 +26,7 @@ client = TelegramClient('client', api_id = Config.API_ID, api_hash = Config.API_
  
 #start mesajı
 
-@bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
-async def live(client: Client, message: Message):
-    livemsg = await message.reply_text('`EGOİSTBEY Hoşgeldin KraL Bende Burdayım🥳 **BİRİCİK SAHİBİM @DeepKraL 🖤`')
+
 
 
 
@@ -37,7 +35,7 @@ anlik_calisan = []
 
 ozel_list = [1601353177]
 
-melih = []
+
 
 
 
@@ -51,21 +49,17 @@ async def chatid(event):
 
     global grup_sayi
 
-@client.on(events.NewMessage())
 
 async def chatid(event):
 
   global melih
+:
 
-  if event.is_group:
+    
 
-    if event.chat_id in grup_sayi:
+      
 
-      pass
-
-    else:
-
-      grup_sayi.append(event.chat_id)     
+         
 
 @client.on(events.NewMessage(pattern='^/start@youtubevcprobot ?(.*)'))
 
