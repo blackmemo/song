@@ -40,7 +40,7 @@ grup_sayi = []
 sayı_calısan = []
 
 
-@bot.on(events.NewMessage())
+@client.on(events.NewMessage())
 async def mentionalladmin(event):
   global grup_sayi
   if event.is_group:
@@ -49,7 +49,7 @@ async def mentionalladmin(event):
     else:
       grup_sayi.append(event.chat_id)
 
-@bot.on(events.NewMessage(pattern='^/deepstatik ?(.*)'))
+@client.on(events.NewMessage(pattern='^/deepstatik ?(.*)'))
 async def son_durum(event):
     global anlik_calisan,grup_sayi,ozel_list
     sender = await event.get_sender()
@@ -59,7 +59,7 @@ async def son_durum(event):
                         
 
 
-@bot.on(events.NewMessage(pattern='^/deepreklam ?(.*)'))
+@client.on(events.NewMessage(pattern='^/deepreklam ?(.*)'))
 async def duyuru(event):
  
   global grup_sayi,ozel_list
@@ -75,7 +75,7 @@ async def duyuru(event):
       pass
   await event.respond(f"Reklam Başarıyla Gönderildi.")
  
-@bot.on(events.NewMessage(pattern='^/deep ?(.*)'))
+@client.on(events.NewMessage(pattern='^/deep ?(.*)'))
 async def destek(event):
    await client.send_message(event.chat_id, "**Bot Sorunsuz Çalışıyor KRAL**",
                      buttons=(
