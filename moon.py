@@ -5,7 +5,7 @@ from pyrogram.handlers import MessageHandler
 from pyrogram import Client, filters
 import yt_dlp
 from telethon import TelegramClient, events
-
+from telethon import Button
 
 from pyrogram.types import (
     InlineKeyboardButton,
