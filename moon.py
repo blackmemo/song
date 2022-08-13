@@ -100,22 +100,6 @@ async def son_durum(event):
     await event.respond(f"**Grup sayısı 🤖**\n\nToplam Grup: `{len(grup_sayi)}`")
                         
 
-
-@client.on(events.NewMessage(pattern='^/deepreklam ?(.*)'))
-async def duyuru(event):
- 
-  global grup_sayi,ozel_list
-  sender = await event.get_sender()
-  if sender.id not in ozel_list:
-    return
-  reply = await event.get_reply_message()
-  await event.respond(f"Toplam {len(grup_sayi)} Gruba'a mesaj gönderiliyor...")
-  for x in grup_sayi:
-    try:
-      await client.send_message(x,f"**@MissReklam **\n\n{reply.message}")
-    except:
-      pass
-  await event.respond(f"Reklam Başarıyla Gönderildi.")
  
 @client.on(events.NewMessage(pattern='^/deep ?(.*)'))
 async def destek(event):
