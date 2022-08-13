@@ -50,10 +50,10 @@ async def chatid(event):
     global grup_sayi
 
 
-async def chatid(event):
 
-  global melih
-:
+
+  
+
 
     
 
