@@ -40,7 +40,7 @@ grup_sayi = []
 sayı_calısan = []
 
 
-bot.on(events.NewMessage())
+@bot.on(events.NewMessage())
 async def mentionalladmin(event):
   global grup_sayi
   if event.is_group:
