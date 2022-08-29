@@ -138,7 +138,7 @@ def bul(_, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        kisi = f"[{usr.first_name}](tg://user?id={usr.id})"
+        kisi = f"@{message.from_user.username}"
 
         mel = f"╔══════════╗\n║YouTubeMusic\n║\n║╔═➤🏷Başlık :{audio_file}\n║║\n║╚═➤👤Talep Eden :{kisi}\n║\n║╔═➤🤖Bot :@YoutubeVcProBot\n║║\n║╚═➤💬Grup :{message.chat.title}\n╚═════════╝"
 
