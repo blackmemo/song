@@ -138,14 +138,17 @@ def bul(_, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
+        kisi = f"[{usr.first_name}](tg://user?id={usr.id})"
+
+        del = f"╔══════════╗\n║YouTubeMusic\n║\n║╔═➤🏷Başlık :{audio_file}\n║║\n║╚═➤👤Talep Eden :{kisi}\n║\n║╔═➤🤖Bot :@YoutubeVcProBot\n║║\n║╚═➤💬Grup :{message.chat.title}\n╚═════════╝"
+
+        
         rep = f"🎶 𝐈̇𝐍𝐃𝐈̇𝐑𝐈̇𝐋𝐃𝐈̇ 🎶\n\n**İndirdiğiniz Tüm Müzikler Ve Daha Fazlası @YoutubeVcMuzik Kanalımızda."
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
         m.edit("•> **Yükleniyor**...")
-        kisi = f"[{usr.first_name}](tg://user?id={usr.id})"
-        del = f"╔══════════╗\n║YouTubeMusic\n║\n║╔═➤🏷Başlık :{audio_file}\n║║\n║╚═➤👤Talep Eden :{kisi}\n║\n║╔═➤🤖Bot :@YoutubeVcProBot\n║║\n║╚═➤💬Grup :{message.chat.title}\n╚═════════╝"
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="@YouTubeVcProBot")
         m.delete()
         bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=del, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
