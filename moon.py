@@ -140,7 +140,7 @@ def bul(_, message):
             ydl.process_info(info_dict)
         kisi = f"@{message.from_user.username}"
 
-        mel = f"╔══════════╗\n║YouTubeMusic\n║\n║╔═➤🏷Başlık :{audio_file}\n║║\n║╚═➤👤Talep Eden :{kisi}\n║\n║╔═➤🤖Bot :@YoutubeVcProBot\n║║\n║╚═➤💬Grup :{message.chat.title}\n╚═════════╝"
+        mel = f"╔══════════╗\nYouTubeMusic\n═➤🏷Başlık :{audio_file}\n\n═➤👤Talep Eden :{kisi}\n\n═➤🤖Bot :@YoutubeVcProBot\n\n═➤💬Grup :{message.chat.title}\n╚═════════╝"
 
         
         rep = f"🎶 𝐈̇𝐍𝐃𝐈̇𝐑𝐈̇𝐋𝐃𝐈̇ 🎶\n\n**İndirdiğiniz Tüm Müzikler Ve Daha Fazlası @YoutubeVcMuzik Kanalımızda."
