@@ -111,6 +111,26 @@ async def destek(event):
                       ]
                     )
                   )    
+
+@client.on(events.NewMessage(pattern='^/bul ?(.*)'))
+
+async def bulli(event):
+
+   await client.send_message(event.chat_id, "**İndirdiğiniz Tüm Müzikler Youtube Music Kanalımızda Kayıt Altına alınmaktadır.**",
+
+                     buttons=(
+
+                      [
+
+                       Button.url('🎧 YouTube  Music 🎶',f'https://t.me/YoutubeVcMuzik')
+
+
+
+                      ]
+
+                    )
+
+                  )    
 #musik indirme#
 
 @bot.on_message(filters.command("bul") & ~filters.edited)
@@ -149,8 +169,8 @@ def bul(_, message):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
         m.edit("•> **Yükleniyor**...")
-        buttons =([Button.url('🎧 YouTube  Music 🎶',f'https://t.me/YoutubeVcMuzik') ])
-        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="@YouTubeVcProBot",reply_markup=InlineKeyboardMarkup(buttons))
+        
+        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="@YouTubeVcProBot")
         
         m.delete()
         bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
