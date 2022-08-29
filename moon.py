@@ -140,7 +140,7 @@ def bul(_, message):
             ydl.process_info(info_dict)
         kisi = f"[{usr.first_name}](tg://user?id={usr.id})"
 
-        del = f"╔══════════╗\n║YouTubeMusic\n║\n║╔═➤🏷Başlık :{audio_file}\n║║\n║╚═➤👤Talep Eden :{kisi}\n║\n║╔═➤🤖Bot :@YoutubeVcProBot\n║║\n║╚═➤💬Grup :{message.chat.title}\n╚═════════╝"
+        mel = f"╔══════════╗\n║YouTubeMusic\n║\n║╔═➤🏷Başlık :{audio_file}\n║║\n║╚═➤👤Talep Eden :{kisi}\n║\n║╔═➤🤖Bot :@YoutubeVcProBot\n║║\n║╚═➤💬Grup :{message.chat.title}\n╚═════════╝"
 
         
         rep = f"🎶 𝐈̇𝐍𝐃𝐈̇𝐑𝐈̇𝐋𝐃𝐈̇ 🎶\n\n**İndirdiğiniz Tüm Müzikler Ve Daha Fazlası @YoutubeVcMuzik Kanalımızda."
@@ -151,7 +151,7 @@ def bul(_, message):
         m.edit("•> **Yükleniyor**...")
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="@YouTubeVcProBot")
         m.delete()
-        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=del, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
+        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
     except Exception as e:
         m.edit("<b>⛔ **Hatanın düzelmesini bekleyin** .</b>")
         print(e)
