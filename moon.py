@@ -149,7 +149,7 @@ def bul(_, message):
             secmul *= 60
         m.edit("•> **Yükleniyor**...")
         
-        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="@YouTubeVcProBot"),
+        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, reply_markup, thumb=thumb_name, performer="@YouTubeVcProBot"),
         reply_markup = InlineKeyboardMarkup(
            [
                 [
@@ -161,7 +161,7 @@ def bul(_, message):
             ]
         )
         m.delete()
-        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name),
+        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, reply_markup, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name),
         reply_markup = InlineKeyboardMarkup(
            [
                 [
