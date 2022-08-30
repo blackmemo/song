@@ -171,20 +171,7 @@ def bul(_, message):
         m.edit("•> **Yükleniyor**...")
         
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="@YouTubeVcProBot"),
-        buttons=(
-
-                      [
-
-                       Button.url('🎧 YouTube  Music 🎶',f'https://t.me/YoutubeVcMuzik')
-
-
-
-                      ]
-
-                    )
-
-                  )    
-        
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Gelistiriciye ulas", url="https://google.com")]])
         m.delete()
         bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
 
