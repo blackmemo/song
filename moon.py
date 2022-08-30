@@ -161,7 +161,7 @@ def bul(_, message):
             ]
         )
         m.delete()
-        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, reply_markup, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name),
+        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name),
         reply_markup = InlineKeyboardMarkup(
            [
                 [
