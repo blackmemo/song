@@ -112,27 +112,6 @@ async def destek(event):
                     )
                   )    
 
-@client.on(events.NewMessage(pattern='^/bul ?(.*)'))
-
-async def bulli(event):
-
-   await client.send_message(event.chat_id, "**İndirdiğiniz Tüm Müzikler Youtube Music Kanalımızda Kayıt Altına alınmaktadır.**",
-
-                     buttons=(
-
-                      [
-
-                       Button.url('🎧 YouTube  Music 🎶',f'https://t.me/YoutubeVcMuzik')
-
-
-
-                      ]
-
-                    )
-
-                  )    
-#musik indirme#
-
 @bot.on_message(filters.command("bull") & ~filters.edited)
 def bul(_, message):
     query = " ".join(message.command[1:])
