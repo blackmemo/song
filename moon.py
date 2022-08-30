@@ -133,7 +133,7 @@ async def bulli(event):
                   )    
 #musik indirme#
 
-@bot.on_message(filters.command("bul") & ~filters.edited)
+@bot.on_message(filters.command("bull") & ~filters.edited)
 def bul(_, message):
     query = " ".join(message.command[1:])
     m = message.reply("<b>• 🔍 𝐀𝐑𝐀𝐍𝐈𝐘𝐎𝐑...</b>")
@@ -171,7 +171,7 @@ def bul(_, message):
         m.edit("•> **Yükleniyor**...")
         
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, InlineKeyboardButton, thumb=thumb_name, performer="@YouTubeVcProBot"),
-        keyboard = InlineKeyboardMarkup(
+        reply_markup = InlineKeyboardMarkup(
            [
                 [
                     InlineKeyboardButton(
@@ -183,7 +183,7 @@ def bul(_, message):
         )
         m.delete()
         bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name, InlineKeyboardButton),
-        keyboard = InlineKeyboardMarkup(
+        reply_markup = InlineKeyboardMarkup(
            [
                 [
                     InlineKeyboardButton(
