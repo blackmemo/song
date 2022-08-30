@@ -171,10 +171,28 @@ def bul(_, message):
         m.edit("•> **Yükleniyor**...")
         
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="@YouTubeVcProBot"),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Gelistiriciye ulas", url="https://google.com")]])
+        keyboard = InlineKeyboardMarkup(
+           [
+                [
+                    InlineKeyboardButton(
+                        text="💢 𝐊𝐎𝐌𝐔𝐓𝐋𝐀𝐑 𝐯𝐞 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 💢",
+                        url="https://t.me/MissMusicSupport")
+                   
+                ]
+            ]
+        )
         m.delete()
         bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Gelistiriciye ulas", url="https://google.com")]])
+        keyboard = InlineKeyboardMarkup(
+           [
+                [
+                    InlineKeyboardButton(
+                        text="💢 𝐊𝐎𝐌𝐔𝐓𝐋𝐀𝐑 𝐯𝐞 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 💢",
+                        url="https://t.me/MissMusicSupport")
+                   
+                ]
+            ]
+        )
 
     except Exception as e:
         m.edit("<b>⛔ **Hatanın düzelmesini bekleyin** .</b>")
