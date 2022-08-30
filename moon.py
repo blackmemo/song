@@ -154,7 +154,7 @@ def bul(_, message):
            [
                 [
                     InlineKeyboardButton(
-                        text="💢 Gelistirici 💢",
+                        text="💢 İndirdiğiniz Tüm Müzikler Youtube Music Kanalımızda Kayıt Altına alınmaktadır. 💢 ",
                         url="https://t.me/Hasohasan")
                    
                 ]
@@ -167,8 +167,8 @@ def bul(_, message):
            [
                 [
                     InlineKeyboardButton(
-                        text="💢 Gelistirici 💢",
-                        url="https://t.me/Hasohasan")
+                        text="💢 İndirdiğiniz Tüm Müzikler Youtube Music Kanalımızda Kayıt Altına alınmaktadır. 💢",
+                        url="🎧 YouTube Music 🎧", "https://t.me/YoutubevcMuzik")
                    
                 ]
             ]
