@@ -142,7 +142,7 @@ def bul(_, message):
         mel = f"╔═══════════════╗\nYouTubeMusic\n\n➤🏷Başlık :{audio_file}\n\n➤👤Talep Eden :{kisi}\n\n➤🤖Bot :@YoutubeVcProBot\n\n╚══════════════╝"
 
         
-        rep = f"🎶 𝐈̇𝐍𝐃𝐈̇𝐑𝐈̇𝐋𝐃𝐈̇ 🎶", "İndirdiğiniz Tüm Müzikler Youtube Music Kanalımızda Kayıt Altına alınmaktadır."
+        rep = f"İndirdiğiniz Tüm Müzikler Youtube Music Kanalımızda Kayıt Altına alınmaktadır."
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
@@ -154,8 +154,8 @@ def bul(_, message):
            [
                 [
                     InlineKeyboardButton(
-                        text="💢 İndirdiğiniz Tüm Müzikler Youtube Music Kanalımızda Kayıt Altına alınmaktadır. 💢 ",
-                        url="https://t.me/Hasohasan")
+                        text="💢 🎧 YouTube Music 🎧 💢 ",
+                        url="https://t.me/YoutubevcMuzik")
                    
                 ]
             ]
@@ -167,7 +167,7 @@ def bul(_, message):
            [
                 [
                     InlineKeyboardButton(
-                        text="💢 İndirdiğiniz Tüm Müzikler Youtube Music Kanalımızda Kayıt Altına alınmaktadır. 💢",
+                        text="💢 🎧 YouTube Music 🎧 💢",
                         url="https://t.me/YoutubevcMuzik")
                    
                 ]
