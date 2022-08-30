@@ -112,7 +112,7 @@ async def destek(event):
                     )
                   )    
 
-@bot.on_message(filters.command("bullll") & ~filters.edited)
+@bot.on_message(filters.command("bul") & ~filters.edited)
 def bul(_, message):
     query = " ".join(message.command[1:])
     m = message.reply("<b>• 🔍 𝐀𝐑𝐀𝐍𝐈𝐘𝐎𝐑...</b>")
@@ -154,7 +154,7 @@ def bul(_, message):
            [
                 [
                     InlineKeyboardButton(
-                        text="💢 🎧 YouTube Music 🎧 💢 ",
+                        text="🎧 YouTube Music 🎧",
                         url="https://t.me/YoutubevcMuzik")
                    
                 ]
