@@ -175,8 +175,8 @@ def bul(_, message):
            [
                 [
                     InlineKeyboardButton(
-                        text="💢 𝐊𝐎𝐌𝐔𝐓𝐋𝐀𝐑 𝐯𝐞 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 💢",
-                        url="https://t.me/MissMusicSupport")
+                        text="💢 Gelistirici 💢",
+                        url="https://t.me/Hasohasan")
                    
                 ]
             ]
@@ -187,8 +187,8 @@ def bul(_, message):
            [
                 [
                     InlineKeyboardButton(
-                        text="💢 𝐊𝐎𝐌𝐔𝐓𝐋𝐀𝐑 𝐯𝐞 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 💢",
-                        url="https://t.me/MissMusicSupport")
+                        text="💢 Gelistirici 💢",
+                        url="https://t.me/Hasohasan")
                    
                 ]
             ]
