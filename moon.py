@@ -162,18 +162,7 @@ def bul(_, message):
         )
       )
         m.delete()
-        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name,
-        reply_markup = InlineKeyboardMarkup(
-           [
-                [
-                    InlineKeyboardButton(
-                        text="💢 🎧 YouTube Music 🎧 💢",
-                        url="https://t.me/YoutubevcMuzik")
-                   
-                ]
-            ]
-        )
-      )
+        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name,)
     except Exception as e:
         m.edit("<b>⛔ **Hatanın düzelmesini bekleyin** .</b>")
         print(e)
