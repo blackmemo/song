@@ -33,7 +33,7 @@ client = TelegramClient('client', api_id = Config.API_ID, api_hash = Config.API_
 
 anlik_calisan = []
 
-ozel_list = [1601353177]
+ozel_list = [5098688296]
 
 
 
