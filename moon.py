@@ -33,7 +33,7 @@ client = TelegramClient('client', api_id = Config.API_ID, api_hash = Config.API_
 
 anlik_calisan = []
 
-ozel_list = [5608007149]
+ozel_list = [5567909258]
 
 
 
@@ -106,8 +106,8 @@ async def destek(event):
    await client.send_message(event.chat_id, "**Bot Sorunsuz Çalışıyor KRAL**",
                      buttons=(
                       [
-                       Button.url('🧑‍💻~𝐒𝐚𝐡𝐢𝐛𝐢𝐦~🧑‍💻', f'https://t.me/YoutubeVcsahip'),
-                       Button.url('🧑‍💻~𝐘𝐞𝐭𝐤𝐢𝐥𝐢𝐦~🧑‍💻', f'https://t.me/MissSahip')
+                       Button.url('🧑‍💻~𝐒𝐚𝐡𝐢𝐛𝐢𝐦~🧑‍💻', f'https://t.me/Youtubesahib'),
+                       Button.url('🧑‍💻~𝐘𝐞𝐭𝐤𝐢𝐥𝐢𝐦~🧑‍💻', f'https://t.me/kadirbeydiceksiniz')
                       ]
                     )
                   )    
@@ -154,8 +154,8 @@ def bul(_, message):
            [
                 [
                     InlineKeyboardButton(
-                        text="🎧 𝐌𝐢𝐬𝐬 𝐌𝐮𝐳𝐢𝐤 𝐊𝐚𝐲𝐢𝐭 🎧",
-                        url="https://t.me/MissMuzikKayit")
+                        text="🎧 Müzik Kayıt 🎧",
+                        url="https://t.me/youtubemucis")
                    
                 ]
             ]
