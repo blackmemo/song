@@ -101,13 +101,13 @@ async def son_durum(event):
                         
 
  
-@client.on(events.NewMessage(pattern='^/deep ?(.*)'))
+@client.on(events.NewMessage(pattern='^/memo ?(.*)'))
 async def destek(event):
-   await client.send_message(event.chat_id, "**Bot Sorunsuz Çalışıyor KRAL**",
+   await client.send_message(event.chat_id, "**ʙᴏᴛ sᴏʀᴜɴsᴜᴢ ʙɪʀ şᴇᴋɪʟᴅᴇ ᴄ̧ᴀʟışıʏᴏʀ😎**",
                      buttons=(
                       [
-                       Button.url('🧑‍💻~𝐒𝐚𝐡𝐢𝐛𝐢𝐦~🧑‍💻', f'https://t.me/Youtubesahib'),
-                       Button.url('🧑‍💻~𝐘𝐞𝐭𝐤𝐢𝐥𝐢𝐦~🧑‍💻', f'https://t.me/kadirbeydiceksiniz')
+                       Button.url('sᴀʜɪʙɪᴍ', f'https://t.me/memokra'),
+                       Button.url('ᴅᴇsᴛᴇᴋ ᴋᴀɴᴀʟıᴍıᴢ', f'https://t.me/blackbotdestek')
                       ]
                     )
                   )    
@@ -115,7 +115,7 @@ async def destek(event):
 @bot.on_message(filters.command("bul") & ~filters.edited)
 def bul(_, message):
     query = " ".join(message.command[1:])
-    m = message.reply("<b>• 🔍 𝐀𝐑𝐀𝐍𝐈𝐘𝐎𝐑...</b>")
+    m = message.reply("<b>• 🔍 şᴀʀᴋıʏı ᴀʀıʏᴏʀᴜᴍ...</b>")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -128,10 +128,10 @@ def bul(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("<b>⛔ **❌ Ş𝚊𝚛𝚔ı 𝙱𝚞𝚕𝚞𝚗𝚊𝚖𝚊𝚍ı.\n\n 𝙻𝚄̈𝚃𝙵𝙴𝙽 𝙶𝙴𝙲̧𝙴𝚁𝙻𝙸̇ 𝙱𝙸̇𝚁 𝚂̧𝙰𝚁𝙺𝙸 𝙰𝙳𝙸 𝚅𝙴𝚁𝙸̇𝙽.**</b>")
+        m.edit("<b> **❌ şᴀʀᴋı ʙᴜʟᴜɴᴀᴍᴀᴅı.\n\n ʟᴜ̈ᴛғᴇɴ ɢᴇᴄ̧ᴇʀʟɪ ʙɪʀ şᴀʀᴋı ᴀᴅı ɢɪʀɪɴ.**</b>")
         print(str(e))
         return
-        m.edit("<b>•> 📥 𝙸̇𝙽𝙳𝙸̇𝚁𝙼𝙴 𝙸̇𝚂̧𝙻𝙴𝙼𝙸̇ 𝙱𝙰𝚂̧𝙻𝙰𝚃𝙸𝙻𝙳𝙸...**</b>")
+        m.edit("<b>•> 📥 ɪ̇ɴᴅɪʀᴍᴇ ɪşʟᴇᴍɪ ʙᴀşʟᴀᴛıʟᴅı...**</b>")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -139,30 +139,30 @@ def bul(_, message):
             ydl.process_info(info_dict)
         kisi = f"@{message.from_user.username}"
 
-        mel = f"╔═══════════════╗\nYouTubeMusic\n\n➤🏷Başlık :{audio_file}\n\n➤👤Talep Eden :{kisi}\n\n➤🤖Bot :@YoutubeVcProBot\n\n╚══════════════╝"
+        mel = f"🎧📌\nblackmuzikbotu\n\n🏷Başlık :{audio_file}\n\nTalep Eden :{kisi}\n\nBot :@blackmuzikbot\n\n📌🎧"
 
         
-        rep = f"𝙸𝚗𝚍𝚒𝚛𝚍𝚒𝚐𝚒𝚗𝚒𝚣 𝚃𝚞𝚖 𝙼𝚞𝚣𝚒𝚔𝚕𝚎𝚛 Miss Muzik 𝙺𝚊𝚗𝚊𝚕𝚒𝚖𝚒𝚣𝚍𝚊 𝙺𝚊𝚢𝚒𝚝 𝙰𝚕𝚝𝚒𝚗𝚊 𝙰𝚕𝚒𝚗𝚖𝚊𝚔𝚝𝚊𝚍𝚒𝚛."
+        rep = f"ɪ̇ɴᴅɪʀᴅɪɢ̆ɪɴɪᴢ ᴛᴜ̈ᴍ ᴍᴜ̈ᴢɪᴋʟᴇʀ ᴋᴀɴᴀʟıᴍıᴢᴅᴀ 🎧."
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        m.edit("•> **Yükleniyor**...")
+        m.edit("⌛")
         
-        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="@YouTubeVcProBot",
+        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="@blackmuzikbot",
         reply_markup = InlineKeyboardMarkup(
            [
                 [
                     InlineKeyboardButton(
-                        text="🎧 Müzik Kayıt 🎧",
-                        url="https://t.me/youtubemucis")
+                        text="🎧 Müzik Kanalı 🎙️",
+                        url="https://t.me/blackmuzikbotu")
                    
                 ]
             ]
         )
       )
         m.delete()
-        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, performer="@YouTubeVcProBot", parse_mode='md', title=title, duration=dur, thumb=thumb_name,)
+        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=mel, performer="@blackmuzikbot", parse_mode='md', title=title, duration=dur, thumb=thumb_name,)
     except Exception as e:
         m.edit("<b>⛔ **Hatanın düzelmesini bekleyin** .</b>")
         print(e)
