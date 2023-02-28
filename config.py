@@ -9,4 +9,3 @@ class Config:
     PLAYLIST_NAME = os.environ.get("PLAYLIST_NAME", "blackmuzikbotu")
     GROUP = os.environ.get("GROUP", "blackbotdestek") 
     PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID", "-1001599632490")
-    OWNER_ID = os.environ.get("OWNER_ID", "5412574484")
