@@ -43,9 +43,12 @@ grup_sayi = []
 
 sayı_calısan = []
 
-@client.on(events.NewMessage(pattern='^/reload ?(.*)'))
+@client.on(events.NewMessage(pattern='^/reload ?(.*)') & filters.user(Config.BOT_OWNER))
+async def reload(client: Client, message: Message):
+    livemsg = await message.reply_text('`⚡ʙᴏᴛ ʏᴇɴɪᴅᴇɴ ʙᴀşʟᴀᴛıʟᴅı⚡`')
+    
 
-async def chatid(event):
+
 
     global grup_sayi
 
@@ -101,19 +104,19 @@ async def son_durum(event):
                         
 
  
-@client.on(events.NewMessage(pattern='^/memo ?(.*)'))
+@client.on(events.NewMessage(pattern='^/alive ?(.*)'))
 async def destek(event):
    await client.send_message(event.chat_id, "**ʙᴏᴛ sᴏʀᴜɴsᴜᴢ ʙɪʀ şᴇᴋɪʟᴅᴇ ᴄ̧ᴀʟışıʏᴏʀ😎**",
                      buttons=(
                       [
                        Button.url('sᴀʜɪʙɪᴍ', f'https://t.me/memokra'),
-                       Button.url('ᴅᴇsᴛᴇᴋ ᴋᴀɴᴀʟıᴍıᴢ', f'https://t.me/blackbotdestek')
+                       Button.url('ʏᴇᴛᴋɪʟɪ ʜᴇsᴀᴘ', f'https://t.me/B1rAnkaraBeyefendisi')
                       ]
                     )
                   )    
 
-@bot.on_message(filters.command("bul") & ~filters.edited)
-def bul(_, message):
+@bot.on_message(filters.command("muzik") & ~filters.edited)
+def muzik(_, message):
     query = " ".join(message.command[1:])
     m = message.reply("<b>• 🔍 şᴀʀᴋıʏı ᴀʀıʏᴏʀᴜᴍ...</b>")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
@@ -139,7 +142,7 @@ def bul(_, message):
             ydl.process_info(info_dict)
         kisi = f"@{message.from_user.username}"
 
-        mel = f"🎧📌\nblackmuzikbotu\n\n🏷Başlık :{audio_file}\n\nTalep Eden :{kisi}\n\nBot :@blackmuzikbot\n\n📌🎧"
+        mel = f"🎧📌\nblackmuzikbotu\n\n🏷Başlık :{audio_file}\n\nTalep Eden :{kisi}\n\nBot :@blacketiketbot\n\n📌🎧"
 
         
         rep = f"ɪ̇ɴᴅɪʀᴅɪɢ̆ɪɴɪᴢ ᴛᴜ̈ᴍ ᴍᴜ̈ᴢɪᴋʟᴇʀ ᴋᴀɴᴀʟıᴍıᴢᴅᴀ 🎧."
