@@ -42,9 +42,7 @@ grup_sayi = []
 
 sayı_calısan = []
 
-@client.on(events.NewMessage(pattern='^/reload ?(.*)') 
-    
-async def chatid(event):
+
 
 
     global grup_sayi
