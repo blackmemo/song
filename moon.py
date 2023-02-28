@@ -38,9 +38,8 @@ ozel_list = [5412574484]
 
 
 if member.id in config.OWNER_ID:
-                return await message.reply_text(
-                    _("Hoş geldin Black İyi ki geldin 🥰").format(
-                        config.MUSIC_BOT_NAME, member.mention
+                return await message.reply_text(("Hoş geldin Black İyi ki geldin 🥰").format(
+                        config.BOT_USERNAME, member.mention
                     )
                 )
 
