@@ -42,11 +42,9 @@ grup_sayi = []
 
 sayı_calısan = []
 
-@client.on(events.NewMessage(pattern='^/reload ?(.*)') & filters.user(Config.BOT_OWNER))
-async def reload(client: Client, message: Message):
-    livemsg = await message.reply_text('`⚡ʙᴏᴛ ʏᴇɴɪᴅᴇɴ ʙᴀşʟᴀᴛıʟᴅı⚡`')
+@client.on(events.NewMessage(pattern='^/reload ?(.*)') 
     
-
+async def chatid(event):
 
 
     global grup_sayi
@@ -63,7 +61,7 @@ async def reload(client: Client, message: Message):
 
          
 
-@client.on(events.NewMessage(pattern='^/start@youtubevcprobot ?(.*)'))
+@client.on(events.NewMessage(pattern='^/start@blacketiketbot ?(.*)'))
 
 async def chatid(event):
 
