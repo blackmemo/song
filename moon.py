@@ -37,11 +37,6 @@ ozel_list = [5412574484]
 
 
 
-if member.id in config.OWNER_ID:
-                return await message.reply_text(("Hoş geldin Black İyi ki geldin 🥰").format(
-                        config.BOT_USERNAME, member.mention
-                    )
-                )
 
 grup_sayi = [] 
 
